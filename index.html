@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Novel Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Visual Novel Planner</h1>
+        <button id="theme-switcher">Toggle Theme</button>
+    </header>
+
+    <main>
+        <div id="story-viewer">
+            <h2 id="scene-day-title"></h2>
+            <h3 id="scene-title"></h3>
+            <p id="scene-description"></p>
+            <div id="scene-choices" class="choices-container">
+                <!-- Choices will be dynamically added here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
