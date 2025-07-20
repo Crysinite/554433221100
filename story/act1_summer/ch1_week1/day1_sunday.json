@@ -1,0 +1,89 @@
+{
+    "dayTitle": "Act 1 / Chapter 1 / Sunday, August 1st",
+    "scenes": {
+        "morning": {
+            "title": "A New Beginning",
+            "description": "The sun streams through your window. It's the first day of the last month of summer. You remember you have to get ready for school starting next month, which means visiting a few places today. Your main goal is to **visit the Library, the Cafe, and the Park** before heading home to prepare for tomorrow.",
+            "choices": [
+                {
+                    "text": "Head out and start your errands",
+                    "target": "#afternoon"
+                }
+            ]
+        },
+        "afternoon": {
+            "title": "Town Square",
+            "description": "You're standing in the town square. From here you can get to the Library, the Cafe, or the Park. Where to first?",
+            "choices": [
+                {
+                    "text": "Go to the Library",
+                    "target": "#library",
+                    "setState": { "visited_library": true },
+                    "conditions": { "visited_library": false }
+                },
+                {
+                    "text": "Go to the Cafe",
+                    "target": "#cafe",
+                    "setState": { "visited_cafe": true },
+                    "conditions": { "visited_cafe": false }
+                },
+                {
+                    "text": "Go to the Park",
+                    "target": "#park",
+                    "setState": { "visited_park": true },
+                    "conditions": { "visited_park": false }
+                },
+                {
+                    "text": "Head home for the day",
+                    "target": "#night",
+                    "conditions": {
+                        "visited_library": true,
+                        "visited_cafe": true,
+                        "visited_park": true
+                    },
+                    "lockedText": "You haven't finished your errands"
+                }
+            ]
+        },
+        "library": {
+            "title": "The Library",
+            "description": "You spend some time at the library, picking up a few books for the upcoming semester. One down, two to go.",
+            "choices": [
+                {
+                    "text": "Return to the Town Square",
+                    "target": "#afternoon"
+                }
+            ]
+        },
+        "cafe": {
+            "title": "The Cafe",
+            "description": "You grab a coffee at your favorite spot. The energy helps you feel ready for the rest of the day.",
+            "choices": [
+                {
+                    "text": "Return to the Town Square",
+                    "target": "#afternoon"
+                }
+            ]
+        },
+        "park": {
+            "title": "The Park",
+            "description": "You take a relaxing stroll through the park, clearing your head before the busy school year begins.",
+            "choices": [
+                {
+                    "text": "Return to the Town Square",
+                    "target": "#afternoon"
+                }
+            ]
+        },
+        "night": {
+            "title": "Home at Last",
+            "description": "You've finished all your errands and are finally back home. It was a productive day. You feel prepared for whatever comes next.",
+            "choices": [
+                {
+                    "text": "Go to sleep (End Day)",
+                    "target": "act1_summer/ch1_week1/day2_monday.json#morning"
+                }
+            ]
+        }
+    }
+}
