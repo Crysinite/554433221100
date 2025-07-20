@@ -1,0 +1,15 @@
+{
+    "dayTitle": "Act 1 / Chapter 1 / Monday, August 2nd",
+    "scenes": {
+        "morning": {
+            "title": "A New Day",
+            "description": "The story continues on Monday...",
+            "choices": [
+                {
+                    "text": "To be continued...",
+                    "target": "#"
+                }
+            ]
+        }
+    }
+}
